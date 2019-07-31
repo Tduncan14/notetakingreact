@@ -21,6 +21,10 @@ class App extends Component{
 
 
 
+
+
+
+
   render() {
 
 
@@ -28,6 +32,9 @@ class App extends Component{
    <div class="App_container">
       
     <SideBar
+     deleteNote ={this.deleteNote}
+     selectNote = {this.selectNote}
+     newNote ={this.newNote}
      selectedNoteIndex ={this.state.selectedNoteIndex}
      notes = {this.state.notes}/>
     <Editor/>
@@ -54,5 +61,8 @@ class App extends Component{
    })
    
  }
+
+
+ selectNote = (note,index) => this.setState({selectedNoteIndex:index , selectedNote:note})
 }
 export default App;

@@ -9,8 +9,8 @@ import SideBarItem from '../sidebarItem/SidebarItem';
 
 
 class SideBar extends Component{
-   constructor(props){
-       super(props);
+   constructor(){
+       super();
 
 
     this.state = {
@@ -39,7 +39,7 @@ class SideBar extends Component{
 
    }
 
-   selectNote = () => console.log('selctNote');
+   selectNote = (note,index) => this.props.selectNote(note,index);
 
    
    deleteNote = () => console.log('deleteNOte');
