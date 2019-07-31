@@ -27,7 +27,9 @@ class App extends Component{
     return(
    <div class="App_container">
       
-    <SideBar/>
+    <SideBar
+     selectedNoteIndex ={this.state.selectedNoteIndex}
+     notes = {this.state.notes}/>
     <Editor/>
 
    </div>
